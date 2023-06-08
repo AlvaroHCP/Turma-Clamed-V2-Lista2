@@ -10,27 +10,53 @@
 
 <body>
 
-    <div style="width: 100%; margin-top: 230px; text-align: center;">
+    <main style="width: 560px; margin-left: 425px; margin-top: 230px; text-align: center; display:block;">
         <!-- Dados Pessoais -->
-        <h2>Calculadora de Média Aritmética</h2>
-        <h4>Insira seus números abaixo:</h4>
-        <div>
-            <label for="termo">Número 1:</label>
-            <input style="width: 60px;" type="text" id="numero1" required>
+        <h2 style="text-align: center;">Calculadora de Médias</h2>
+        <h4 style="text-align: center;">Insira seus números abaixo:</h4>
+        <div style="margin-left: 10px; margin-top: 10px; display:inline-flex;">
+            <div>
+                <label for="termo">Número 1:</label>
+                <input style="width: 60px;" type="text" id="numero1" required>
+            </div>
+            <div>
+                <label style="margin-left: 10px; " for="termo">Peso 1:</label>
+                <input style="width: 60px;" type="text" id="peso1" required>
+            </div>
         </div>
-        <div style="margin-top: 10px;">
-            <label for="termo">Número 2:</label>
-            <input style="width: 60px;" type="text" id="numero2" required>
+
+        <div style="margin-left: 10px; margin-top: 10px; display:inline-flex;">
+            <div>
+                <label for="termo">Número 2:</label>
+                <input style="width: 60px;" type="text" id="numero2" required>
+            </div>
+            <div>
+                <label style="margin-left: 10px; " for="termo">Peso 2:</label>
+                <input style="width: 60px;" type="text" id="peso2" required>
+            </div>
         </div>
-        <div style="margin-top: 10px;">
-            <label for="termo">Número 3:</label>
-            <input style="width: 60px;" type="text" id="numero3" required>
+
+        <div style="margin-left: 10px; margin-top: 10px; display:inline-flex;">
+            <div>
+                <label for="termo">Número 3:</label>
+                <input style="width: 60px;" type="text" id="numero3" required>
+            </div>
+            <div>
+                <label style="margin-left: 10px; " for="termo">Peso 3:</label>
+                <input style="width: 60px;" type="text" id="peso3" required>
+            </div>
         </div>
-        <div style="margin-top: 20px;">
-            <input type="submit" value="Calcular Média" onclick="calculaMedia()"
-                style="background-color: lightblue; width: 140px;">
+        <div style="display: inline-flex;">
+            <div style="margin-top: 20px; margin-left: 10px;">
+                <input type="submit" value="Média Aritmética" onclick="calculaMediaAritmetica()"
+                    style="background-color: lightblue; width: 140px;">
+            </div>
+            <div style="margin-top: 20px; margin-left: 10px;">
+                <input type="submit" value="Média Ponderada" onclick="calculaMediaPonderada()"
+                    style="background-color: lightblue; width: 140px;">
+            </div>
         </div>
-    </div>
+    </main>
 
     <script src="./script.js"></script>
 </body>
