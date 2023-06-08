@@ -1,3 +1,14 @@
+
+function lerPromptMediaAritmetica() {
+    const quantidade = Number(prompt("Insira o número de valores que serão utilizados no cálculo da Média Aritmética."))
+    let numero = Number(prompt("Insira o primeiro número:"))
+    for (i = 0; i < quantidade - 1; i++) {
+        numero += Number(prompt("Insira o próximo número"))
+    }
+    let mediaAritmetica = numero / quantidade
+    alert("A Média Aritmética é " + mediaAritmetica)
+}
+
 function calculaMediaAritmetica() {
     let numero = document.getElementById("numero1")
     const numero1 = Number(numero.value)
