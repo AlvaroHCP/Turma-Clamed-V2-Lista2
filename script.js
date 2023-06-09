@@ -1,3 +1,16 @@
+function capturaNomeSobrenomeIdade() {
+    const nome = prompt("Digite o nome do aluno:")
+    const sobrenome = prompt("Digite o sobrenome do aluno:")
+    const idade = prompt("Digite a idade do aluno:")
+    let nomeCompleto = nome + " " + sobrenome
+    alert("\nO nome do aluno é: " + nomeCompleto + "\n\nSua idade é: " + idade)
+
+    // Usando JQuery para estilizar dinamicamente
+    // $("main").css("color", "red")
+    $("main").css("margin-top", "70px")
+    // Usando JQuery para adicionar um elemento no arquivo HTML
+    $("#cadastro-aluno").append("<h1>Aluno Cadastrado:</h1><div style=\"border: 3px solid red;\"><h3>" + nomeCompleto + "</h3> <h4>" + idade + " anos</h4>");
+}
 
 function lerPromptMediaAritmetica() {
     const quantidade = Number(prompt("Insira o número de valores que serão utilizados no cálculo da Média Aritmética."))
