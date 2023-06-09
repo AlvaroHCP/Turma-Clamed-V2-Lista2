@@ -12,6 +12,13 @@ function capturaNomeSobrenomeIdade() {
     $("#cadastro-aluno").append("<h1>Aluno Cadastrado:</h1><div style=\"border: 3px solid red;\"><h3>" + nomeCompleto + "</h3> <h4>" + idade + " anos</h4>");
 }
 
+function calculaIMC() {
+    const altura = prompt("Digite sua altura em m: (digite ponto como separador de casas decimais)")
+    const peso = prompt("Digite seu peso em kg: (digite ponto como separador de casas decimais)")
+    const imc = Number(peso) / Number(altura ** 2)
+    alert("O seu IMC é: " + imc)
+}
+
 function lerPromptMediaAritmetica() {
     const quantidade = Number(prompt("Insira o número de valores que serão utilizados no cálculo da Média Aritmética."))
     let numero = Number(prompt("Insira o primeiro número:"))
