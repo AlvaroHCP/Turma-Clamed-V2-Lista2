@@ -90,7 +90,7 @@ function promptChar() {
         if (isNaN(parseFloat(char))) {
             return char
         } else {
-            alert("Digite somente números!")
+            alert("Digite somente letras!")
         }
     }
 }
