@@ -69,6 +69,19 @@ function promptFloat() {
     }
 }
 
+function promptInteiro() {
+    let numeroInteiro
+    while (true) {
+        numeroInteiro = prompt("Digite o número desejado:")
+
+        if (isNaN(parseFloat(numeroInteiro))) {
+            alert("Digite somente números!")
+        } else {
+            return numeroInteiro
+        }
+    }
+}
+
 
 
 function lerPromptMediaAritmetica() {
