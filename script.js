@@ -82,7 +82,18 @@ function promptInteiro() {
     }
 }
 
+function promptChar() {
+    let char
+    while (true) {
+        char = prompt("Digite o número desejado:")
 
+        if (isNaN(parseFloat(char))) {
+            return char
+        } else {
+            alert("Digite somente números!")
+        }
+    }
+}
 
 function lerPromptMediaAritmetica() {
     const quantidade = Number(prompt("Insira o número de valores que serão utilizados no cálculo da Média Aritmética."))
