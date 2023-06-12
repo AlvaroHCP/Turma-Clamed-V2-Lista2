@@ -1,13 +1,34 @@
 function capturaNomeSobrenomeIdade() {
-    const nome = prompt("Digite o nome do aluno:")
-    const sobrenome = prompt("Digite o sobrenome do aluno:")
-    const idade = prompt("Digite a idade do aluno:")
+    var nome, sobrenome, idade
+    while (true) {
+        nome = prompt("Digite o nome do aluno:")
+        sobrenome = prompt("Digite o sobrenome do aluno:")
+        idade = prompt("Digite a idade do aluno:")
+
+        if (isNaN(parseFloat(nome)) && isNaN(parseFloat(sobrenome)) && isNaN(parseInt(idade)) == false) {
+            break
+        } else {
+            alert("Digite informações válidas!")
+        }
+        // try {
+        //     nonExistentFunction();
+        // } catch (error) {
+        //     console.error(error);
+        // } finally {
+        //     console.log("Continues")
+        // }
+
+        // if (typeof nome == "string") {
+        //     break
+        // }
+    }
+
     let nomeCompleto = nome + " " + sobrenome
     alert("\nO nome do aluno é: " + nomeCompleto + "\n\nSua idade é: " + idade)
 
     // Usando JQuery para estilizar dinamicamente
     // $("main").css("color", "red")
-    $("main").css("margin-top", "70px")
+    $("main").css("margin-top", "50px")
     // Usando JQuery para adicionar um elemento no arquivo HTML
     $("#cadastro-aluno").append("<h1>Aluno Cadastrado:</h1><div style=\"border: 3px solid red;\"><h3>" + nomeCompleto + "</h3> <h4>" + idade + " anos</h4>");
 }
