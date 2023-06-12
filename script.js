@@ -34,8 +34,18 @@ function capturaNomeSobrenomeIdade() {
 }
 
 function calculaIMC() {
-    const altura = prompt("Digite sua altura em m: (digite ponto como separador de casas decimais)")
-    const peso = prompt("Digite seu peso em kg: (digite ponto como separador de casas decimais)")
+
+    while (true) {
+        altura = prompt("Digite sua altura em m: (digite ponto como separador de casas decimais)")
+        peso = prompt("Digite seu peso em kg: (digite ponto como separador de casas decimais)")
+
+        if (isNaN(parseFloat(altura)) == false && isNaN(parseFloat(peso)) == false) {
+            break
+        } else {
+            alert("Digite apenas números!")
+        }
+    }
+
     const imc = Number(peso) / Number(altura ** 2)
     alert("O seu IMC é: " + imc)
 }
