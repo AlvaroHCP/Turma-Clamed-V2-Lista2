@@ -55,16 +55,16 @@ function calculaIMC() {
 function promptFloat(mensagemInput) {
     let numeroFloat = 0
     while (true) {
-        numeroFloat = prompt(MensagemInput)
+        numeroFloat = prompt(mensagemInput)
         try {
-            numeroFloat.replace(",", ".")
+            numeroFloat = numeroFloat.replace(",", ".")
         } catch {
             continue
         }
         if (isNaN(parseFloat(numeroFloat))) {
             alert("Digite somente números!")
         } else {
-            return numeroFloat
+            return Number(numeroFloat)
         }
     }
 }
@@ -74,10 +74,10 @@ function promptInteiro(mensagemInput) {
     while (true) {
         numeroInteiro = prompt(mensagemInput)
 
-        if (isNaN(parseFloat(numeroInteiro))) {
-            alert("Digite somente números!")
+        if (numeroInteiro.includes(",") || numeroInteiro.includes(".") || isNaN(parseInt(numeroInteiro))) {
+            alert("Digite somente números inteiros!")
         } else {
-            return numeroInteiro
+            return Number(numeroInteiro)
         }
     }
 }
@@ -88,7 +88,7 @@ function promptChar(mensagemInput) {
         char = prompt(mensagemInput)
 
         if (isNaN(parseFloat(char))) {
-            return char
+            return char.trim()
         } else {
             alert("Digite somente letras!")
         }
@@ -96,10 +96,10 @@ function promptChar(mensagemInput) {
 }
 
 function lerPromptMediaAritmetica() {
-    const quantidade = Number(prompt("Insira o número de valores que serão utilizados no cálculo da Média Aritmética."))
-    let numero = Number(prompt("Insira o primeiro número:"))
+    const quantidade = promptInteiro("Insira o número de valores que serão utilizados no cálculo da Média Aritmética.")
+    let numero = promptInteiro("Insira o primeiro número:")
     for (i = 0; i < quantidade - 1; i++) {
-        numero += Number(prompt("Insira o próximo número"))
+        numero += promptInteiro("Insira o próximo número")
     }
     let mediaAritmetica = numero / quantidade
     alert("A Média Aritmética é " + mediaAritmetica)
