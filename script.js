@@ -52,10 +52,10 @@ function calculaIMC() {
     alert("O seu IMC é: " + imc)
 }
 
-function promptFloat() {
+function promptFloat(mensagemInput) {
     let numeroFloat = 0
     while (true) {
-        numeroFloat = prompt("Digite o número desejado:")
+        numeroFloat = prompt(MensagemInput)
         try {
             numeroFloat.replace(",", ".")
         } catch {
@@ -69,10 +69,10 @@ function promptFloat() {
     }
 }
 
-function promptInteiro() {
+function promptInteiro(mensagemInput) {
     let numeroInteiro
     while (true) {
-        numeroInteiro = prompt("Digite o número desejado:")
+        numeroInteiro = prompt(mensagemInput)
 
         if (isNaN(parseFloat(numeroInteiro))) {
             alert("Digite somente números!")
@@ -82,10 +82,10 @@ function promptInteiro() {
     }
 }
 
-function promptChar() {
+function promptChar(mensagemInput) {
     let char
     while (true) {
-        char = prompt("Digite o número desejado:")
+        char = prompt(mensagemInput)
 
         if (isNaN(parseFloat(char))) {
             return char
