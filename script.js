@@ -1,9 +1,10 @@
 function capturaNomeSobrenomeIdade() {
     var nome, sobrenome, idade
+
     while (true) {
         nome = prompt("Digite o nome do aluno:")
         sobrenome = prompt("Digite o sobrenome do aluno:")
-        idade = prompt("Digite a idade do aluno:")
+        idade = prompt("Digite a idade do aluno: (Digite somente números inteiros!)")
 
         if (isNaN(parseFloat(nome)) && isNaN(parseFloat(sobrenome)) && isNaN(parseInt(idade)) == false) {
             break
@@ -34,6 +35,7 @@ function capturaNomeSobrenomeIdade() {
 }
 
 function calculaIMC() {
+    var altura, peso
 
     while (true) {
         altura = prompt("Digite sua altura em m: (digite ponto como separador de casas decimais)")
@@ -49,6 +51,25 @@ function calculaIMC() {
     const imc = Number(peso) / Number(altura ** 2)
     alert("O seu IMC é: " + imc)
 }
+
+function promptFloat() {
+    let numeroFloat = 0
+    while (true) {
+        numeroFloat = prompt("Digite o número desejado:")
+        try {
+            numeroFloat.replace(",", ".")
+        } catch {
+            continue
+        }
+        if (isNaN(parseFloat(numeroFloat))) {
+            alert("Digite somente números!")
+        } else {
+            return numeroFloat
+        }
+    }
+}
+
+
 
 function lerPromptMediaAritmetica() {
     const quantidade = Number(prompt("Insira o número de valores que serão utilizados no cálculo da Média Aritmética."))
