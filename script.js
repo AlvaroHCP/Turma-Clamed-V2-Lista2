@@ -1,3 +1,45 @@
+function promptFloat(mensagemInput) {
+    let numeroFloat = 0
+    while (true) {
+        numeroFloat = prompt(mensagemInput)
+        try {
+            numeroFloat = numeroFloat.replace(",", ".")
+        } catch {
+            continue
+        }
+        if (isNaN(parseFloat(numeroFloat))) {
+            alert("Digite somente números!")
+        } else {
+            return Number(numeroFloat)
+        }
+    }
+}
+
+function promptInteiro(mensagemInput) {
+    let numeroInteiro
+    while (true) {
+        numeroInteiro = prompt(mensagemInput)
+
+        if (numeroInteiro.includes(",") || numeroInteiro.includes(".") || isNaN(parseInt(numeroInteiro))) {
+            alert("Digite somente números inteiros!")
+        } else {
+            return Number(numeroInteiro)
+        }
+    }
+}
+
+function promptChar(mensagemInput) {
+    let char
+    while (true) {
+        char = prompt(mensagemInput)
+        if (isNaN(parseFloat(char))) {
+            return char.trim()
+        } else {
+            alert("Digite somente letras!")
+        }
+    }
+}
+
 function capturaNomeSobrenomeIdade() {
     var nome, sobrenome, idade
 
@@ -50,49 +92,6 @@ function calculaIMC() {
 
     const imc = Number(peso) / Number(altura ** 2)
     alert("O seu IMC é: " + imc)
-}
-
-function promptFloat(mensagemInput) {
-    let numeroFloat = 0
-    while (true) {
-        numeroFloat = prompt(mensagemInput)
-        try {
-            numeroFloat = numeroFloat.replace(",", ".")
-        } catch {
-            continue
-        }
-        if (isNaN(parseFloat(numeroFloat))) {
-            alert("Digite somente números!")
-        } else {
-            return Number(numeroFloat)
-        }
-    }
-}
-
-function promptInteiro(mensagemInput) {
-    let numeroInteiro
-    while (true) {
-        numeroInteiro = prompt(mensagemInput)
-
-        if (numeroInteiro.includes(",") || numeroInteiro.includes(".") || isNaN(parseInt(numeroInteiro))) {
-            alert("Digite somente números inteiros!")
-        } else {
-            return Number(numeroInteiro)
-        }
-    }
-}
-
-function promptChar(mensagemInput) {
-    let char
-    while (true) {
-        char = prompt(mensagemInput)
-
-        if (isNaN(parseFloat(char))) {
-            return char.trim()
-        } else {
-            alert("Digite somente letras!")
-        }
-    }
 }
 
 function lerPromptMediaAritmetica() {
